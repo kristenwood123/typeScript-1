@@ -1,23 +1,3 @@
-// Intersection types
-
-type Admin = {
-  name: string;
-  privileges: string[];
-}
-
-type Employee = {
-  name: string;
-  startDate: Date;
-}
-
-type ElevatedEmployee = Admin & Employee;
-
-const el: ElevatedEmployee = {
-  name: 'Max',
-  privileges: ['create-server'],
-  startDate: new Date()
-}
-
 // Classes
 class Department {
   name: string;
@@ -27,15 +7,15 @@ class Department {
   }
 
   describe() {
-    console.log('Department: ' + this.name);
+    console.log('Department ' + this.name);
+    
   }
 }
 
-const accounting = new Department('Accounting')
+const clothing = new Department('Clothing')
 
-accounting.describe()
 
-const accountingCopy = { describe: accounting.describe }
+clothing.describe()
 
-accountingCopy.describe()
+
 

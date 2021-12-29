@@ -1,17 +1,13 @@
-"use strict";
-// Intersection types
-const el = {
-    name: 'Max',
-    privileges: ['create-server'],
-    startDate: new Date()
-};
 // Classes
-class Department {
-    constructor(n) {
+var Department = /** @class */ (function () {
+    function Department(n) {
         this.name = n;
     }
+    Department.prototype.describe = function () {
+        console.log('Department ' + this.name);
+    };
+    return Department;
+}());
+var clothing = new Department('Clothing');
+console.log(clothing);
 
-    
-}
-const accounting = new Department('Accounting');
-console.log(accounting);
